@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la primera red de internet mundial gratuita</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="assets/star.gif" alt="Imagen de Bienvenida">
+        <h1>Bienvenido a la primera red de internet mundial gratuita</h1>
+        <button id="connectButton">Conectarse</button>
+    </div>
+
+    <script src="assets/script.js"></script>
+    <script>
+        document.getElementById('connectButton').addEventListener('click', function() {
+            var counterElement = document.getElementById("counter");
+
+            var countdown = setInterval(function() {
+                var currentCount = parseInt(counterElement.textContent);
+                if (currentCount > 0) {
+                    counterElement.textContent = currentCount - 1;
+                } else {
+                    clearInterval(countdown);
+                    document.getElementById("message").style.display = "none";
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
